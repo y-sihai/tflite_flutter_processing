@@ -1,12 +1,12 @@
 import 'dart:math';
 import 'dart:ui';
 
-import 'package:tflite_flutter_helper/src/common/operator.dart';
-import 'package:tflite_flutter_helper/src/common/sequential_processor.dart';
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/common/tensor_operator.dart';
-import 'package:tflite_flutter_helper/src/image/ops/tensor_operator_wrapper.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_image.dart';
+import 'package:tflite_flutter_processing/src/common/operator.dart';
+import 'package:tflite_flutter_processing/src/common/sequential_processor.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/common/tensor_operator.dart';
+import 'package:tflite_flutter_processing/src/image/ops/tensor_operator_wrapper.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_image.dart';
 
 import 'image_operator.dart';
 import 'ops/rot90_op.dart';

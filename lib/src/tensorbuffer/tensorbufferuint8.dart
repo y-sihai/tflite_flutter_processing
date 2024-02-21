@@ -1,8 +1,8 @@
 import 'dart:math';
 
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// Represents data buffer with 8-bit unsigned integer values.
 class TensorBufferUint8 extends TensorBuffer {
@@ -14,8 +14,8 @@ class TensorBufferUint8 extends TensorBuffer {
   TensorBufferUint8.dynamic() : super.dynamic();
 
   @override
-  TfLiteType getDataType() {
-    return TfLiteType.uint8;
+  int getDataType() {
+    return TfLiteType.kTfLiteUInt8;
   }
 
   @override

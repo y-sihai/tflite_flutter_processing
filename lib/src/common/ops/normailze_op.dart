@@ -1,7 +1,7 @@
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/common/tensor_operator.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/common/tensor_operator.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// Normalizes a [TensorBuffer] with given mean and stddev: output = (input - mean) / stddev.
 class NormalizeOp implements TensorOperator {
@@ -29,8 +29,8 @@ class NormalizeOp implements TensorOperator {
   /// Note: If [mean] is set to 0 and [stddev] is set to 1, no computation will
   /// happen, and original input will be directly returned in execution.
   ///
-  /// Note: The returned [TensorBuffer] is always a [TfLiteType.float32] tensor at
-  /// present, except that the input is a [TfLiteType.uint8] tensor, [mean] is set to 0 and
+  /// Note: The returned [TensorBuffer] is always a [TfLiteType.kTfLiteFloat32] tensor at
+  /// present, except that the input is a [TfLiteType.kTfLiteUInt8] tensor, [mean] is set to 0 and
   /// [stddev] is set to 1.
   ///
   ///
@@ -65,8 +65,8 @@ class NormalizeOp implements TensorOperator {
   /// Note: If all values in [mean] are set to 0 and all [stddev] are set to 1, no
   /// computation will happen, and original input will be directly returned in execution.
   ///
-  /// Note: The returned [TensorBuffer] is always a [TfLiteType.float32] tensor at
-  /// present, except that the input is a [TfLiteType.uint8] tensor, all [mean] are set to
+  /// Note: The returned [TensorBuffer] is always a [TfLiteType.kTfLiteFloat32] tensor at
+  /// present, except that the input is a [TfLiteType.kTfLiteUInt8] tensor, all [mean] are set to
   /// 0 and all [stddev] are set to 1.
   ///
   /// List<double> [mean] are the mean values to be subtracted first for each channel.
@@ -125,9 +125,9 @@ class NormalizeOp implements TensorOperator {
     }
     TensorBuffer output;
     if (input.isDynamic) {
-      output = TensorBuffer.createDynamic(TfLiteType.float32);
+      output = TensorBuffer.createDynamic(TfLiteType.kTfLiteFloat32);
     } else {
-      output = TensorBuffer.createFixedSize(shape, TfLiteType.float32);
+      output = TensorBuffer.createFixedSize(shape, TfLiteType.kTfLiteFloat32);
     }
     output.loadList(values, shape: shape);
     return output;

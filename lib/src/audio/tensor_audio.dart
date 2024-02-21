@@ -3,7 +3,7 @@ import 'dart:typed_data';
 
 import 'package:quiver/check.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
 
 class TensorAudio {
   static const String TAG = "TensorAudioDart";
@@ -80,7 +80,7 @@ class TensorAudio {
             .asFloat32List()
             .length
         ],
-        TfLiteType.float32);
+        TfLiteType.kTfLiteFloat32);
     tensorBuffer.loadBuffer(byteBuffer);
     return tensorBuffer;
   }

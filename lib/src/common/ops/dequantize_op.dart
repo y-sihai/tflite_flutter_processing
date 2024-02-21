@@ -1,5 +1,5 @@
-import 'package:tflite_flutter_helper/src/common/ops/normailze_op.dart';
-import 'package:tflite_flutter_helper/src/common/tensor_operator.dart';
+import 'package:tflite_flutter_processing/src/common/ops/normailze_op.dart';
+import 'package:tflite_flutter_processing/src/common/tensor_operator.dart';
 
 /// Dequantizes a [TensorBuffer] with given [zeroPoint] and [scale].
 ///

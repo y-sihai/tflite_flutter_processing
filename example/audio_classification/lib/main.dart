@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:audio_classification/classifier.dart';
 import 'package:flutter/material.dart';
 import 'package:random_color/random_color.dart';
-import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
 
 void main() {
   runApp(MyApp());

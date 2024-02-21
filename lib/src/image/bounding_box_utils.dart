@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/rendering.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// Helper class for converting values that represents bounding boxes into rectangles.
 ///
@@ -50,7 +50,7 @@ class BoundingBoxUtils {
   /// [D] is the number of dimensions of the [tensor].
   ///
   /// Throws [ArgumentError] if [tensor] has data type other than
-  /// [TfLiteType.float32].
+  /// [TfLiteType.kTfLiteFloat32].
   static List<Rect> convert({
     required TensorBuffer tensor,
     List<int> valueIndex = const <int>[0, 1, 2, 3],
@@ -82,7 +82,7 @@ class BoundingBoxUtils {
           "Bounding box index list length ${valueIndex.length} is not 4. Got index list $valueIndex",
     );
     SupportPreconditions.checkArgument(
-        tensor.getDataType() == TfLiteType.float32,
+        tensor.getDataType() == TfLiteType.kTfLiteFloat32,
         errorMessage:
             "Bounding Boxes only create from FLOAT32 buffers. Got: ${tensor.getDataType()}");
 

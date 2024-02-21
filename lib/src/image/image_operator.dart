@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:tflite_flutter_helper/src/common/operator.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_image.dart';
+import 'package:tflite_flutter_processing/src/common/operator.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_image.dart';
 
 /// Operates a TensorImage object. Used in ImageProcessor.
 abstract class ImageOperator extends Operator<TensorImage> {

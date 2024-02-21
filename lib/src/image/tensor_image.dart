@@ -4,11 +4,11 @@ import 'dart:typed_data';
 import 'package:image/image.dart';
 import 'package:quiver/check.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_helper/src/image/base_image_container.dart';
-import 'package:tflite_flutter_helper/src/image/color_space_type.dart';
-import 'package:tflite_flutter_helper/src/image/image_container.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_buffer_container.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/image/base_image_container.dart';
+import 'package:tflite_flutter_processing/src/image/color_space_type.dart';
+import 'package:tflite_flutter_processing/src/image/image_container.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_buffer_container.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// [TensorImage] is the wrapper class for [Image] object. When using image processing utils in
 /// Flutter Helper library, it's common to convert image objects in variant types to TensorImage at
@@ -29,12 +29,12 @@ import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
 /// See [ImageProcessor] which is often used for transforming a [TensorImage].
 class TensorImage {
   BaseImageContainer? _container;
-  final TfLiteType _tfLiteType;
+  final int _tfLiteType;
 
   /// Initialize a [TensorImage] object.
   ///
   /// Note: For Image with float value pixels use [TensorImage(TfLiteType.float)]
-  TensorImage([TfLiteType dataType = TfLiteType.uint8])
+  TensorImage([int dataType = TfLiteType.kTfLiteUInt8])
       : _tfLiteType = dataType;
 
   /// Initialize [TensorImage] from [Image]
@@ -134,19 +134,19 @@ class TensorImage {
   /// Gets the current data type.
   ///
   /// Currently only UINT8 and FLOAT32 are possible.
-  TfLiteType get dataType {
+  int get dataType {
     return _tfLiteType;
   }
 
   /// Gets the current data type.
   ///
   /// Currently only UINT8 and FLOAT32 are possible.
-  TfLiteType getDataType() => dataType;
+  int getDataType() => dataType;
 
   /// Gets the current data type.
   ///
   /// Currently only UINT8 and FLOAT32 are possible.
-  TfLiteType get tfLiteType {
+  int get tfLiteType {
     return _tfLiteType;
   }
 

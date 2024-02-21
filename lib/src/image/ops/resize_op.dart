@@ -1,8 +1,8 @@
 import 'package:image/image.dart' show Image, copyResize, Interpolation;
 import 'dart:math' show Point;
-import 'package:tflite_flutter_helper/src/image/image_operator.dart';
-import 'package:tflite_flutter_helper/src/image/ops/resize_with_crop_or_pad_op.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_image.dart';
+import 'package:tflite_flutter_processing/src/image/image_operator.dart';
+import 'package:tflite_flutter_processing/src/image/ops/resize_with_crop_or_pad_op.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_image.dart';
 
 /// As a computation unit for processing images, it can resize an image to user-specified size.
 ///

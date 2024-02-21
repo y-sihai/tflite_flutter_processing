@@ -1,8 +1,8 @@
 import 'package:meta/meta.dart';
-import 'package:tflite_flutter_helper/src/common/file_util.dart';
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/label/tensor_label.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/common/file_util.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/label/tensor_label.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// Labels TensorBuffer with axisLabels for outputs.
 ///

@@ -1,10 +1,10 @@
 import 'dart:math';
 
-import 'package:tflite_flutter_helper/src/common/support_preconditions.dart';
-import 'package:tflite_flutter_helper/src/common/tensor_operator.dart';
-import 'package:tflite_flutter_helper/src/image/image_operator.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_image.dart';
-import 'package:tflite_flutter_helper/src/tensorbuffer/tensorbuffer.dart';
+import 'package:tflite_flutter_processing/src/common/support_preconditions.dart';
+import 'package:tflite_flutter_processing/src/common/tensor_operator.dart';
+import 'package:tflite_flutter_processing/src/image/image_operator.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_image.dart';
+import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
 
 /// The adapter that makes a TensorOperator able to run with TensorImage.
 ///

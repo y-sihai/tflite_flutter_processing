@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:imageclassification/classifier.dart';
 import 'package:imageclassification/classifier_quant.dart';
 import 'package:logger/logger.dart';
-import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
 
 void main() => runApp(MyApp());
 

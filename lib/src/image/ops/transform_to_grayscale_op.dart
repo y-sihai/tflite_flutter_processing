@@ -1,7 +1,7 @@
 import 'dart:math';
 import 'package:image/image.dart' as imageLib;
-import 'package:tflite_flutter_helper/src/image/image_operator.dart';
-import 'package:tflite_flutter_helper/src/image/tensor_image.dart';
+import 'package:tflite_flutter_processing/src/image/image_operator.dart';
+import 'package:tflite_flutter_processing/src/image/tensor_image.dart';
 
 class TransformToGrayscaleOp extends ImageOperator {
   @override
