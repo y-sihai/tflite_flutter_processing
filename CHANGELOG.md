@@ -1,3 +1,7 @@
+# [0.4.1] - Moved to tflite flutter processor
+* Updated all libraries to support updated tflite_flutter package.
+* fixed bug in android preventing build
+
 # [0.3.0] - Audio Support and Task Library
 * Added support for audio-cases.
 * Task Library for Text based applications.

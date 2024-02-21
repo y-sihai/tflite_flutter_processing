@@ -40,7 +40,7 @@ abstract class Classifier {
     if (numThreads != null) {
       _interpreterOptions.threads = numThreads;
     }
-
+    logger.i("LOADING THE MODEL!");
     loadModel();
     loadLabels();
   }

@@ -1,8 +1,8 @@
-group 'com.chaoticdevelopment.tflite_flutter_processing'
+group 'io.chaosdev.tflite_flutter_processing'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.3.50'
+    ext.kotlin_version = '1.6.10'
     repositories {
         google()
         jcenter()
