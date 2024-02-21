@@ -4,7 +4,7 @@ import 'package:audio_classification/main.dart';
 import 'package:flutter/services.dart';
 import 'package:collection/collection.dart';
 import 'package:tflite_flutter/tflite_flutter.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart';
 
 class Classifier {
   late Interpreter interpreter;

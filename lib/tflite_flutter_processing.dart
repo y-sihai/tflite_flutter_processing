@@ -8,7 +8,7 @@
 /// input and output of TFLite Models.
 ///
 /// API is similar to the TensorFlow Lite Android Support Library.
-library tflite_flutter_helper;
+library tflite_flutter_processing;
 
 export 'src/common/ops/cast_op.dart';
 export 'src/common/ops/dequantize_op.dart';

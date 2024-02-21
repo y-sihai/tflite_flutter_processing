@@ -1,5 +1,5 @@
-#ifndef FLUTTER_PLUGIN_TFLITE_FLUTTER_HELPER_PLUGIN_H_
-#define FLUTTER_PLUGIN_TFLITE_FLUTTER_HELPER_PLUGIN_H_
+#ifndef FLUTTER_PLUGIN_TFLITE_FLUTTER_PROCESSING_PLUGIN_H_
+#define FLUTTER_PLUGIN_TFLITE_FLUTTER_PROCESSING_PLUGIN_H_
 
 #include <flutter_linux/flutter_linux.h>
 
@@ -16,11 +16,11 @@ typedef struct {
   GObjectClass parent_class;
 } TfliteFlutterHelperPluginClass;
 
-FLUTTER_PLUGIN_EXPORT GType tflite_flutter_helper_plugin_get_type();
+FLUTTER_PLUGIN_EXPORT GType tflite_flutter_processing_plugin_get_type();
 
-FLUTTER_PLUGIN_EXPORT void tflite_flutter_helper_plugin_register_with_registrar(
+FLUTTER_PLUGIN_EXPORT void tflite_flutter_processing_plugin_register_with_registrar(
     FlPluginRegistrar* registrar);
 
 G_END_DECLS
 
-#endif  // FLUTTER_PLUGIN_TFLITE_FLUTTER_HELPER_PLUGIN_H_
+#endif  // FLUTTER_PLUGIN_TFLITE_FLUTTER_PROCESSING_PLUGIN_H_

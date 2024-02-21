@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart.dart';
 
 class BertQA {
   late final BertQuestionAnswerer bertQuestionAnswerer;
