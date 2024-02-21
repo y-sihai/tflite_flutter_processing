@@ -1,5 +1,6 @@
 import 'package:camera/camera.dart';
 import 'package:image/image.dart' as img;
+import 'package:tflite_flutter/tflite_flutter.dart';
 import 'package:tflite_flutter_processing/src/image/base_image_container.dart';
 import 'package:tflite_flutter_processing/src/image/image_conversions.dart';
 import 'package:tflite_flutter_processing/src/tensorbuffer/tensorbuffer.dart';
@@ -31,7 +32,7 @@ class ImageContainer extends BaseImageContainer {
   }
 
   @override
-  TensorBuffer getTensorBuffer(int dataType) {
+  TensorBuffer getTensorBuffer(TensorType dataType) {
     TensorBuffer buffer = TensorBuffer.createDynamic(dataType);
     ImageConversions.convertImageToTensorBuffer(image, buffer);
     return buffer;

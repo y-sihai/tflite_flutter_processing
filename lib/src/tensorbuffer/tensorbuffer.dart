@@ -49,11 +49,11 @@ abstract class TensorBuffer {
   ///
   /// Throws [ArgumentError.notNull] if [shape] is null and
   /// [ArgumentError] is [shape] has non-positive elements.
-  static TensorBuffer createFixedSize(List<int> shape, int dataType) {
+  static TensorBuffer createFixedSize(List<int> shape, TensorType dataType) {
     switch (dataType) {
-      case TfLiteType.kTfLiteFloat32:
+      case TensorType.float32:
         return TensorBufferFloat(shape);
-      case TfLiteType.kTfLiteUInt8:
+      case TensorType.uint8:
         return TensorBufferUint8(shape);
       default:
         throw ArgumentError(
@@ -68,11 +68,11 @@ abstract class TensorBuffer {
   ///
   /// Dynamic TensorBuffers will reallocate memory when loading arrays or data buffers of
   /// different buffer sizes.
-  static TensorBuffer createDynamic(int dataType) {
+  static TensorBuffer createDynamic(TensorType dataType) {
     switch (dataType) {
-      case TfLiteType.kTfLiteFloat32:
+      case TensorType.float32:
         return TensorBufferFloat.dynamic();
-      case TfLiteType.kTfLiteUInt8:
+      case TensorType.uint8:
         return TensorBufferUint8.dynamic();
       default:
         throw ArgumentError(
@@ -83,7 +83,7 @@ abstract class TensorBuffer {
   /// Creates a [TensorBuffer] deep-copying data from another, with specified [TfLiteType].
   ///
   /// Throws [ArgumentError.notNull] if [buffer] is null.
-  static TensorBuffer createFrom(TensorBuffer buffer, int dataType) {
+  static TensorBuffer createFrom(TensorBuffer buffer, TensorType dataType) {
     SupportPreconditions.checkNotNull(buffer,
         message: "Cannot create a buffer from null");
     TensorBuffer result;
@@ -119,7 +119,7 @@ abstract class TensorBuffer {
   List<int> getShape() => shape;
 
   /// Returns the data type of this buffer.
-  int getDataType();
+  TensorType getDataType();
 
   /// Returns a List<double> of the values stored in this buffer. If the buffer is of different types
   /// than double, the values will be converted into double. For example, values in

@@ -1,4 +1,4 @@
-group 'com.tfliteflutter.tflite_flutter_helper'
+group 'com.chaoticdevelopment.tflite_flutter_processing'
 version '1.0-SNAPSHOT'
 
 buildscript {

@@ -3,13 +3,13 @@
 # Run `pod lib lint tflite_flutter_helper.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'tflite_flutter_helper'
-  s.version          = '0.0.1'
+  s.name             = 'tflite_flutter_processing'
+  s.version          = '0.1.0'
   s.summary          = 'A new Flutter project.'
   s.description      = <<-DESC
 A new Flutter project.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'http://chaoticdevelopment.com'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
