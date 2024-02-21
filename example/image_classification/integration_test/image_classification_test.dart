@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:image/image.dart' as img;
 import 'package:imageclassification/classifier.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart';
 
 import 'classifier_test_helper.dart';
 

@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:imageclassification/classifier.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart';
 
 abstract class ClassiferTest extends Classifier {
   @override

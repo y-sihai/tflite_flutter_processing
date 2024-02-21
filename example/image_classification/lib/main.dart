@@ -5,7 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:imageclassification/classifier.dart';
 import 'package:imageclassification/classifier_quant.dart';
 import 'package:logger/logger.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future getImage() async {
-    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
 
     setState(() {
       _image = File(pickedFile!.path);

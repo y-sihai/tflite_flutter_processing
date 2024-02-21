@@ -1,5 +1,5 @@
 import 'package:imageclassification/classifier.dart';
-import 'package:tflite_flutter_processing/tflite_flutter_helper.dart';
+import 'package:tflite_flutter_processing/tflite_flutter_processing.dart';
 
 class ClassifierFloat extends Classifier {
   ClassifierFloat({int? numThreads}) : super(numThreads: numThreads);
