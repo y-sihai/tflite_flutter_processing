@@ -71,8 +71,8 @@ class ImageConversions {
         List<double> floatArr = List.filled(flatSize, 0.0);
         for (int i = 0, j = 0; i < pixels!.length; i++) {
           floatArr[j++] = pixels[i].r.toDouble();
-          floatArr[j++] = pixels[i].r.toDouble();
-          floatArr[j++] = pixels[i].r.toDouble();
+          floatArr[j++] = pixels[i].g.toDouble();
+          floatArr[j++] = pixels[i].b.toDouble();
         }
         buffer.loadList(floatArr, shape: shape);
         break;
